@@ -2,6 +2,6 @@ numpy==1.21.6
 Flask==2.2.2
 flask_cors==1.10.3
 gunicorn==21.2.0
-opencv-python==4.8.0
+opencv-python==4.8.0.76
 tweepy==4.14.0
 python-dotenv==1.0.0
