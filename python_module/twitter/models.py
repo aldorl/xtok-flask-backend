@@ -4,7 +4,7 @@ import tweepy
 import requests
 from io import BytesIO
 from PIL import Image
-from typing import Any, Dict, Union, Optional
+from typing import Any, Dict, Union, Optional, Tuple
 # Local modules
 from config.paths import DIR_PATH, DATA_DIR
 from image_processing.draw import draw_circular_mask
@@ -62,7 +62,7 @@ def get_latest_tweet(api: Optional[tweepy.API], user_handle: str) -> Union[tweep
 
     return latest_tweet
 
-def get_timestamp_and_metrics(tweet: Union[tweepy.models.Status, Dict[str, Any]]) -> tuple[str, str]:
+def get_timestamp_and_metrics(tweet: Union[tweepy.models.Status, Dict[str, Any]]) -> Tuple[str, str]:
     """
     Fetch the timestamp and other tweet metrics.
 

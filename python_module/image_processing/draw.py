@@ -89,28 +89,32 @@ def draw_user_info_and_tweet(draw: ImageDraw, user: Union[tweepy.models.User, Di
         user_handle = "@" + user.screen_name
 
     # Draw the user's display name on the background image.
-    user_display_name_font = ImageFont.truetype("Arial", 26)
+    # user_display_name_font = ImageFont.truetype("Arial", 26) # TEMP comment until font fixed
+    user_display_name_font = ImageFont.load_default()
     user_display_name_position = (265, 619)
     user_display_name_color = (255, 255, 255)
     
     draw_text_on_image(draw, user_display_name_position, user_display_name, user_display_name_font, user_display_name_color)
 
     # Draw the user's handle on the background image.
-    user_handle_font = ImageFont.truetype("Arial", 19)
+    # user_handle_font = ImageFont.truetype("Arial", 19) # TEMP comment until font fixed
+    user_handle_font = ImageFont.load_default()
     user_handle_position = (265, 660)
     user_handle_color = (109, 167, 204)
 
     draw_text_on_image(draw, user_handle_position, user_handle, user_handle_font, user_handle_color)
 
     # Draw a tweet text on the background image, splitting it into lines if necessary.
-    tweet_text_font = ImageFont.truetype("Arial", 28)
+    # tweet_text_font = ImageFont.truetype("Arial", 28) # TEMP comment until font fixed
+    tweet_text_font = ImageFont.load_default()
     tweet_text_position = (159, 762)
     tweet_text_color = (255, 255, 255)
     
     draw_wrapped_text_on_image(draw, tweet_text_position, tweet_text, tweet_text_font, tweet_text_color, line_spacing=1.5)
 
     # Draw the timestamp on the background image.
-    timestamp_font = ImageFont.truetype("Arial", 20)
+    # timestamp_font = ImageFont.truetype("Arial", 20) # TEMP comment until font fixed
+    timestamp_font = ImageFont.load_default()
     timestamp_position = (159, 1100.4)
     timestamp_color = (73, 75, 79)
     
